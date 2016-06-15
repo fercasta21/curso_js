@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+</head>
+<body>
+	<h1>Calculadora</h1>
+	
+	<script type="text/javascript">
+		//CALCULADORA
+			var elegir = prompt("que operación desea realizar?");
+			var a = parseFloat(prompt("ingresa el primer valor"));
+			var b =	parseFloat(prompt("ingresa el segundo valor"));
+
+
+
+				if (elegir =="suma"){
+					var suma = suma(a, b);
+					alert(suma);
+				}
+
+				function suma(a, b){
+					var resultado = a + b;
+					return resultado;
+				}
+				
+			
+
+	</script>
+</body>
+</html>
