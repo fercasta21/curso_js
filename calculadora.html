@@ -13,16 +13,57 @@
 			var b =	parseFloat(prompt("ingresa el segundo valor"));
 
 
-
-				if (elegir =="suma"){
-					var suma = suma(a, b);
-					alert(suma);
-				}
-
 				function suma(a, b){
 					var resultado = a + b;
 					return resultado;
 				}
+				if (elegir =="+"){
+					var suma = suma(a, b);
+					alert(suma);
+				}
+
+				function resta(a,b){
+					var resultado = a-b;
+					return resultado;
+				}
+				if (elegir=="-"){
+					var resta = resta (a,b);
+					alert(resta);
+				}
+
+
+				function multiplicar(a,b){
+					var resultado = a*b;
+					return resultado;
+				}
+				if (elegir=="*"){
+					var multiplicar = multiplicar (a,b);
+					alert(multiplicar);
+				}
+
+				
+
+				/*
+				
+					var calcula = prompt("Que deseas hacer? Tip: puedes sumar, restar, dividir o multiplicar");
+					var number1 = prompt("Ingresa el primer numero");
+					var number2 = prompt("Ingresa el segundo numero");
+					var a = parseFloat(number1, 10);
+					var b = parseFloat(number2, 10);
+					var calculadora = function(){ 
+						if(calcula == "sumar"){
+							alert( a + b );
+						}else if( calcula == "restar" ){
+							alert( a - b );
+						}else if(calcula == "multiplicar"){
+							alert( a * b );
+						}else if(calcula == "dividir"){
+							alert( a / b );
+						}
+					}
+					calculadora();
+		</script>
+				*/
 				
 			
 
