@@ -8,62 +8,45 @@
 	
 	<script type="text/javascript">
 		//CALCULADORA
-			var elegir = prompt("que operación desea realizar?");
-			var a = parseFloat(prompt("ingresa el primer valor"));
-			var b =	parseFloat(prompt("ingresa el segundo valor"));
+			do {
+				var operador = prompt("que operación desea realizar?");
+			} while (operador != "suma" && operador != "resta" && operador != "dividir" && operador != "multiplicar")
+				var numero_1 = parseInt(prompt("ingresa el primer valor"));
+				var numero_2 = parseInt(prompt("ingresa el segundo valor"));
 
-
-				function suma(a, b){
-					var resultado = a + b;
-					return resultado;
-				}
-				if (elegir =="+"){
-					var suma = suma(a, b);
-					alert(suma);
-				}
-
-				function resta(a,b){
-					var resultado = a-b;
-					return resultado;
-				}
-				if (elegir=="-"){
-					var resta = resta (a,b);
-					alert(resta);
-				}
-
-
-				function multiplicar(a,b){
-					var resultado = a*b;
-					return resultado;
-				}
-				if (elegir=="*"){
-					var multiplicar = multiplicar (a,b);
-					alert(multiplicar);
-				}
 
 				
+				function calculadora (operador, numero_1, numero_2){
+					var resultado; 	//declaro la variable para usarla luego
+					switch (operador){
+						case "suma":
+						resultado = numero_1 + numero_2;
+						break;
 
-				/*
-				
-					var calcula = prompt("Que deseas hacer? Tip: puedes sumar, restar, dividir o multiplicar");
-					var number1 = prompt("Ingresa el primer numero");
-					var number2 = prompt("Ingresa el segundo numero");
-					var a = parseFloat(number1, 10);
-					var b = parseFloat(number2, 10);
-					var calculadora = function(){ 
-						if(calcula == "sumar"){
-							alert( a + b );
-						}else if( calcula == "restar" ){
-							alert( a - b );
-						}else if(calcula == "multiplicar"){
-							alert( a * b );
-						}else if(calcula == "dividir"){
-							alert( a / b );
-						}
+						case "resta":
+						resultado = numero_1 - numero_2;
+						break;
+
+						case "multiplicar":
+						resultado = numero_1 * numero_2;
+						break;
+
+						case "dividir":
+						resultado = numero_1 / numero_2;
+						break;
+						default:
+						alert("operacion invalida");
 					}
-					calculadora();
+					return resultado;// devuelve el valor de cada operacion
+				}
+				var a = calculadora(operador, numero_1, numero_2);
+				console.log(a);
+
+
+				
+
 		</script>
-				*/
+				
 				
 			
 
