@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+</head>
+<body>
+	<h1>Calculadora</h1>
+	
+	<script type="text/javascript">
+		//CALCULADORA
+			var programa = function(){
+			do {
+				var operador = prompt("que operacion desea realizar (suma, resta, multiplicacion, division, raiz)?").toLowerCase();
+				// operador = operador.toLowerCase();
+			} while(operador != "suma" && operador != "resta" && operador != "multiplicacion" && operador != "division" && operador != "raiz");
+			
+			do {
+				var numero_1 = parseInt(prompt("ingrese el valor del primer numero"));
+			} while (isNaN(numero_1));
+
+			if (operador!="raiz")
+				do {
+				var numero_2 = parseInt(prompt("ingrese el valor del segundo numero"));
+				} while (isNaN(numero_2));
+
+			var a = calculadora(operador, numero_1, numero_2);
+			alert(a);
+
+			var confirmar = confirm("Volver a ejecutar?");
+			if (confirmar) {
+				programa();
+			}
+			else {
+				alert("Gracias por usar la calculadora");
+				return;
+			};
+			return resultado;
+			
+		};
+
+		function calculadora(operador, numero_1, numero_2) {
+			var resultado;
+			switch(operador) {
+				case "suma":
+				resultado = numero_1 + numero_2;
+				break;
+				case "resta":
+				resultado = numero_1 - numero_2;
+				break;
+				case "multiplicacion":
+				resultado = numero_1 * numero_2;
+				break;
+				case "division":
+				resultado = numero_1 / numero_2;
+				break;
+				case "raiz":
+				resultado = Math.sqrt (numero_1);
+			};
+			if (resultado % 2 == 0){  //si el resultado es divisible por 2 es par
+				alert("Soy par");
+			}
+			
+			
+		};
+		programa();
+
+		</script>
+				
+				
+			
+
+	</script>
+</body>
+</html>

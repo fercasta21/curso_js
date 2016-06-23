@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Ejercicio clase 4</h1>
+
+	<!-- hacer que el usuario elija un numero hasta adivinar cual es el correcto -->
+
+	<script type="text/javascript">
+		
+		//EJERCICIO
+
+		var programa = function(){
+			do {
+				var ingreso = prompt("elegi un numero");
+			} while ( ingreso!=8);
+			if (ingreso==8){
+				alert("Felicitaciones, adivinaste!!");
+			} 
+		};
+
+		//opcion con case que no funciona
+		function adivinar (){
+			switch (ingreso){
+				case ingreso!=8:
+				alert("segui participando");
+				break;
+				case ingreso==8:
+				alert ("felicitaciones")
+				break;
+			}
+		}
+		programa();
+
+	</script>
+
+</body>
+</html>
